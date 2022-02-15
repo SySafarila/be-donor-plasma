@@ -101,7 +101,8 @@ class DonorController extends Controller
             'negativeDate' => $request->negativeDate,
             'agreement' => $request->agreement == 'on' ? true : false,
             'positiveImage' => $positiveImageName,
-            'negativeImage' => $negativeImageName
+            'negativeImage' => $negativeImageName,
+            'status' => false
         ]);
 
         return redirect()->route('formulir.pendaftaran')->with('success', 'Terimakasih telah mendaftar :)');
