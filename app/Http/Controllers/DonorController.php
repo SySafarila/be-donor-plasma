@@ -12,11 +12,28 @@ class DonorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $donors = Donor::latest()->get();
+        $request->validate([
+            'status' => ['in:accepted,rejected']
+        ]);
 
-        // return $donors[0];
+        switch ($request->status) {
+            case 'accepted':
+                $donors = Donor::where('status', true)->latest()->get();
+                break;
+
+            case 'rejected':
+                $donors = Donor::where('status', false)->latest()->get();
+                break;
+
+            default:
+                $donors = Donor::latest()->get();
+                break;
+        }
+
+
+        // return $donors;
 
         return view('admin.donors.index', compact('donors'));
     }
