@@ -1,0 +1,280 @@
+/* == Global CSS (CSS Style For All Page) == */
+html, body {
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #222F54;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    font-size: 14px;
+}
+
+/* Scrollbar Style */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ebebeb;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FF3D48;
+    border-radius: 2px;
+}
+
+/* End Of Scrollbar Style */
+
+/* Font Weight (Default Regular : 400) */
+.fw-medium {
+    font-weight: 500;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+/* End Of Font Weight (Default Regular : 400) */
+
+/* Color & Bg-Color */
+.color-1 {
+    color: #FF3D48;
+}
+
+.color-2 {
+    color: #097FFB;
+}
+
+.color-3 {
+    color: #222F54;
+}
+
+.bg-color-1 {
+    background-color: #FF3D48;
+}
+
+/* End Of Color */
+
+/* Button */
+.primary-btn {
+    background-color: #FF3D48;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: none !important;
+    border: 1px solid #FF3D48;
+    border-radius: 2px;
+}
+
+.primary-btn:hover {
+    color: #ffffff;
+    filter: brightness(85%);
+}
+
+.primary-btn-outline {
+    background-color: transparent;
+    color: #FF3D48;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: none !important;
+    border: 1px solid #FF3D48;
+    border-radius: 2px;
+}
+
+.primary-btn-outline:hover {
+    background-color: #FF3D48;
+    color: #ffffff;
+}
+
+.secondary-btn-outline {
+    background-color: transparent;
+    color: #FF3D48;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: none !important;
+    border: 1px solid #FF3D48;
+    border-radius: 2px;
+}
+
+.secondary-btn-outline:hover {
+    background-color: #FF3D48;
+    color: #ffffff;
+}
+
+/* End Of Button */
+
+/* Footer */
+#footer {
+    margin-top: auto;
+    background-color: #222F54;
+    color: white !important;
+    /* height: 50px; */
+    /* margin-top: -50px; */
+}
+
+#footer .text {
+    padding-top: 10px;
+}
+
+/* End Of Footer */
+
+/* Custom File Input */
+.custom-file-input~.custom-file-label::after {
+    content: "Browse" !important;
+}
+
+.custom-file-label:hover {
+    border-color: #222F54;
+}
+
+.custom-file-label:focus {
+    border-color: #222F54;
+}
+/* End Of Custom File Input */
+
+/* == End Of Global CSS (CSS Style For All Page) == */
+
+/* == Page index.html == */
+
+/* Navbar (Home Navbar) */
+#navbar .nav-menu {
+    margin: 0px 5px;
+}
+
+#navbar .nav-item .nav-link {
+    font-size: 14px;
+    color: #222F54;
+}
+
+#navbar .nav-link.active {
+    color: #FF3D48;
+}
+
+#navbar .btn-donate-now,
+.btn-looking-for-donors {
+    padding: 7px 15px !important;
+}
+
+#navbar .btn-looking-for-donors {
+    color: #FF3D48 !important;
+}
+
+#navbar .btn-looking-for-donors:hover {
+    color: #ffffff !important;
+}
+
+/* End Of Navbar (Home Navbar) */
+
+/* Jumbotron */
+#jumbotron {
+    background-image:
+        linear-gradient(to bottom, rgb(0, 0, 0, 0.80), rgb(0, 0, 0, 0.80)), url('../images/background/nguy-n-hi-p-2rNHliX6XHk-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#jumbotron .btn-donate-now,
+.btn-learn-more {
+    padding: 10px 20px;
+}
+
+#jumbotron .btn-learn-more {
+    border: 1px solid #ffffff;
+}
+
+#jumbotron .btn-learn-more {
+    color: white;
+}
+
+#jumbotron .btn-learn-more:hover {
+    border: 1px solid #FF3D48;
+}
+
+/* End Of Jumbotron */
+
+/* About */
+#about .checkmark-icon {
+    font-size: 20px;
+    vertical-align: middle;
+    color: #42ba96;
+}
+
+/* And Of About */
+/* == End Of Page index.html == */
+
+/* == Page donor-plasma.html == */
+.donor-jumbotron {
+    background-image:
+        linear-gradient(to bottom, rgb(0, 0, 0, 0.60), rgb(0, 0, 0, 0.60)), url('../images/background/biznet-donor-darah-header-website-900x320px---8-jun-2020.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#donor-registration-form label {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#donor-registration-form .form-control {
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+#donor-registration-form .form-control:hover {
+    border-color: #222F54;
+}
+
+#donor-registration-form .form-control:focus {
+    border-color: #222F54;
+}
+/* == End Of Page donor-plasma.html == */
+
+/* == Page : cari-pendonor.html == */
+#donor-list .card-donor:hover .user-photo:hover {
+    background-color: #FF3D48;
+}
+
+#donor-list .card-donor .user-photo {
+    border: 3px solid #FF3D48;
+    width: 115px;
+    height: 115px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+#donor-list .card-donor .btn-contact {
+    padding: 7px 20px;
+}
+
+#donor-list .card-donor .btn {
+    margin: 0px 2px;
+}
+
+.modal-donor-details .close-icon:hover {
+    color: #ff0e0e;
+}
+
+.modal-donor-details .donor-photo {
+    border: 3px solid #FF3D48;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.modal-donor-details .btn {
+    padding: 9px 30px;
+    margin: 5px 5px;
+}
+/* == End Of Page : cari-pendonor.html == */

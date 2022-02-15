@@ -1,0 +1,424 @@
+@media (width: 320px) {
+
+    /* Global CSS */
+    #navbar .nav-item .btn {
+        margin: 6px 0px;
+    }
+
+    /* End Of Global CSS */
+
+    /* Page : index.html */
+    #jumbotron {
+        height: 700px;
+    }
+
+    #jumbotron .heading {
+        font-size: 35px;
+        padding-top: 150px;
+    }
+
+    #jumbotron .btn-donate-now,
+    .btn-learn-more {
+        margin: 6px 5px;
+    }
+    /* End Of Page : index.html */
+
+    /* page : cari-pendonor.html */
+    /* section : donor-list */
+    #donor-list .card-donor {
+        margin-top: 20px;
+    }
+
+    #donor-list .card-donor .blood-group-badge {
+        font-size: 12px;
+        color: #FF3D48;
+        border: 2px solid #FF3D48;
+        background-color: #ffffff;
+        padding-left: 3px;
+        height: 35px;
+        width: 35px;
+        border-radius: 100px;
+        position: absolute;
+        margin-top: -110px;
+        margin-left: 150px !important;
+    }
+
+    /* end of section : donor-list */
+    /* end of page : cari-pendonor.html */
+}
+
+@media (min-width: 321px) and (max-width: 374px) {
+
+    /* Global CSS */
+    #navbar .nav-item .btn {
+        margin: 6px 0px;
+    }
+
+    /* End Of Global CSS */
+
+    /* Page : index.html */
+    #jumbotron {
+        height: 700px;
+    }
+
+    #jumbotron .heading {
+        font-size: 35px;
+        padding-top: 150px;
+    }
+
+    #jumbotron .btn-donate-now,
+    .btn-learn-more {
+        margin: 6px 5px;
+    }
+    /* End Of Page : index.html */
+
+    /* page : cari-pendonor.html */
+    /* section : donor-list */
+    #donor-list .card-donor {
+        margin-top: 20px;
+    }
+
+    #donor-list .card-donor .blood-group-badge {
+        font-size: 12px;
+        color: #FF3D48;
+        border: 2px solid #FF3D48;
+        background-color: #ffffff;
+        padding-left: 3px;
+        height: 35px;
+        width: 35px;
+        border-radius: 100px;
+        position: absolute;
+        margin-top: -110px;
+        margin-left: 170px !important;
+    }
+
+    /* end of section : donor-list */
+    /* end of page : cari-pendonor.html */
+}
+
+@media (width: 375px) {
+
+    /* Global CSS */
+    #navbar .nav-item .btn {
+        margin: 6px 0px;
+    }
+
+    /* End Of Global CSS */
+
+    /* Page : index.html */
+    #jumbotron {
+        height: 700px;
+    }
+
+    #jumbotron .heading {
+        font-size: 35px;
+        padding-top: 150px;
+    }
+
+    #jumbotron .btn-donate-now,
+    .btn-learn-more {
+        margin: 6px 5px;
+    }
+    /* End Of Page : index.html */
+
+    /* page : cari-pendonor.html */
+    /* section : donor-list */
+    #donor-list .card-donor {
+        margin-top: 20px;
+    }
+
+    #donor-list .card-donor .blood-group-badge {
+        font-size: 12px;
+        color: #FF3D48;
+        border: 2px solid #FF3D48;
+        background-color: #ffffff;
+        padding-left: 3px;
+        height: 35px;
+        width: 35px;
+        border-radius: 100px;
+        position: absolute;
+        margin-top: -110px;
+        margin-left: 180px !important;
+    }
+
+    /* end of section : donor-list */
+    /* end of page : cari-pendonor.html */
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+    /* Global CSS */
+    #navbar .nav-item .btn {
+        margin: 6px 0px;
+    }
+
+    /* End Of Global CSS */
+
+    /* Page : index.html */
+    #jumbotron {
+        height: 700px;
+    }
+
+    #jumbotron .heading {
+        font-size: 35px;
+        padding-top: 150px;
+    }
+
+    #jumbotron .btn-donate-now,
+    .btn-learn-more {
+        margin: 6px 5px;
+    }
+    /* End Of Page : index.html */
+
+    /* page : cari-pendonor.html */
+    /* section : donor-list */
+    #donor-list .card-donor {
+        margin-top: 20px;
+    }
+
+    #donor-list .card-donor .blood-group-badge {
+        font-size: 12px;
+        color: #FF3D48;
+        border: 2px solid #FF3D48;
+        background-color: #ffffff;
+        padding-left: 3px;
+        height: 35px;
+        width: 35px;
+        border-radius: 100px;
+        position: absolute;
+        margin-top: -110px;
+        margin-left: 200px;
+    }
+
+    /* end of section : donor-list */
+    /* end of page : cari-pendonor.html */
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    /* Global CSS */
+    #navbar .nav-item .btn {
+        margin: 6px 0px;
+    }
+
+    /* End Of Global CSS */
+
+    /* Page : index.html */
+    #jumbotron {
+        height: 700px;
+    }
+
+    #jumbotron .heading {
+        font-size: 35px;
+        padding-top: 150px;
+    }
+
+    #jumbotron .btn-donate-now,
+    .btn-learn-more {
+        margin: 6px 5px;
+    }
+    /* End Of Page : index.html */
+
+    /* page : cari-pendonor.html */
+    /* section : donor-list */
+    #donor-list .card-donor {
+        margin-top: 20px;
+    }
+    
+    #donor-list .card-donor .blood-group-badge {
+        font-size: 12px;
+        color: #FF3D48;
+        border: 2px solid #FF3D48;
+        background-color: #ffffff;
+        padding-left: 3px;
+        height: 35px;
+        width: 35px;
+        border-radius: 100px;
+        position: absolute;
+        margin-top: -110px;
+        margin-left: 200px;
+    }
+
+    /* end of section : donor-list */
+    /* end of page : cari-pendonor.html */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    /* Global CSS */
+    #navbar .nav-item .btn {
+        margin: 0px 5px;
+    }
+
+    /* End Of Global CSS */
+
+    /* page : index.html */
+    #jumbotron {
+        height: 700px;
+    }
+
+    #jumbotron .heading {
+        padding-top: 200px;
+    }
+
+    #jumbotron .btn-donate-now,
+    .btn-learn-more {
+        margin: 0px 5px;
+    }
+
+    /* end of page : index.html */
+
+    /* page : cari-pendonor.html */
+    /* section : donor-list */
+    #donor-list .card-donor {
+        margin-top: 20px;
+    }
+
+    #donor-list .card-donor .blood-group-badge {
+        font-size: 12px;
+        color: #FF3D48;
+        border: 2px solid #FF3D48;
+        background-color: #ffffff;
+        padding-left: 3px;
+        height: 35px;
+        width: 35px;
+        border-radius: 100px;
+        position: absolute;
+        margin-top: -110px;
+        margin-left: 170px;
+    }
+
+    /* end of section : donor-list */
+    /* end of page : cari-pendonor.html */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    /* Global CSS */
+    #navbar .nav-item .btn {
+        margin: 0px 5px;
+    }
+
+    /* End Of Global CSS */
+
+    /* page : index.html */
+    #jumbotron {
+        height: 700px;
+    }
+
+    #jumbotron .heading {
+        padding-top: 200px;
+    }
+
+    #jumbotron .btn-donate-now,
+    .btn-learn-more {
+        margin: 0px 5px;
+    }
+
+    /* about */
+    #row-about .col-about-01 {
+        height: 350px;
+    }
+
+    #row-about .about-bg-img-01 {
+        height: 350px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #row-about .col-about-02 {
+        height: 400px;
+    }
+
+    #row-about .about-bg-img-02 {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #row-about .col-about-03 {
+        height: 450px;
+    }
+
+    #row-about .about-bg-img-03 {
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+    /* end of about */
+
+    /* end of page : index.html */
+
+    /* page : cari-pendonor.html */
+    /* section : donor-list */
+    #row-donor-list .col-lg-3 {
+        padding: 0px 5px;
+    }
+    
+    #donor-list .card-donor .blood-group-badge {
+        font-size: 12px;
+        color: #FF3D48;
+        border: 2px solid #FF3D48;
+        background-color: #ffffff;
+        padding-left: 3px;
+        height: 35px;
+        width: 35px;
+        border-radius: 100px;
+        position: absolute;
+        margin-top: -110px;
+        margin-left: 110px;
+    }
+
+    /* end of section : donor-list */
+    /* end of page : cari-pendonor.html */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    /* Global CSS */
+    #navbar .nav-item .btn {
+        margin: 0px 5px;
+    }
+
+    /* End Of Global CSS */
+
+    /* page : index.html */
+    #jumbotron {
+        height: 700px;
+    }
+
+    #jumbotron .heading {
+        padding-top: 200px;
+    }
+
+    #jumbotron .btn-donate-now,
+    .btn-learn-more {
+        margin: 0px 5px;
+    }
+
+    /* end of page : index.html */
+
+    /* page : cari-pendonor.html */
+    /* section : donor-list */
+    #donor-list .card-donor .blood-group-badge {
+        font-size: 12px;
+        color: #FF3D48;
+        border: 2px solid #FF3D48;
+        background-color: #ffffff;
+        padding-left: 3px;
+        height: 35px;
+        width: 35px;
+        border-radius: 100px;
+        position: absolute;
+        margin-top: -110px;
+        margin-left: 135px;
+    }
+
+    /* end of section : donor list */
+    /* end of page : cari-pendonor.html */
+}

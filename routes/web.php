@@ -18,9 +18,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('landingpage');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('landingpage');
+
+Route::view('/', 'landingpage')->name('landingpage');
+Route::view('/formulir-pendaftaran', 'formulir-pendaftaran')->name('formulir.pendaftaran');
+Route::view('/cari-pendonor', 'cari-pendonor')->name('cari.pendonor');
 
 Route::get('/dashboard', function () {
     return redirect()->route('admin.index');
