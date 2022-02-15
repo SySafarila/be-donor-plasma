@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AdminIndex;
+use App\Http\Controllers\DonorController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -30,6 +31,7 @@ Route::get('/dashboard', function () {
     return redirect()->route('admin.index');
 })->middleware(['auth'])->name('dashboard');
 
+// admin access
 Route::middleware(['auth', 'verified', 'can:admin access'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', AdminIndex::class)->name('index');
 
@@ -46,9 +48,13 @@ Route::middleware(['auth', 'verified', 'can:admin access'])->prefix('admin')->na
     Route::delete('/bulk-delete/users', [UserController::class, 'massDelete'])->name('users.bulkDelete');
 });
 
+// account manager
 Route::middleware(['verified'])->group(function() {
     Route::get('account/verify-new-email/{token}', [AccountController::class, 'verifyNewEmail'])->name('account.verifyNewEmail');
     Route::resource('account', AccountController::class)->only(['index', 'edit', 'update']);
 });
+
+// donors
+Route::post('/donors', [DonorController::class, 'store'])->name('donors.store');
 
 require __DIR__ . '/auth.php';
