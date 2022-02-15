@@ -48,10 +48,24 @@ class DonorController extends Controller
             'weight' => ['required', 'max:255'],
             'positiveDate' => ['required'],
             'negativeDate' => ['required'],
-            'agreement' => ['required']
+            'agreement' => ['required'],
+            'positiveImage' => ['required', 'image'],
+            'negativeImage' => ['required', 'image']
         ]);
 
-        Donor::create([
+        $positiveImage = $request->file('positiveImage');
+        $negativeImage = $request->file('negativeImage');
+
+        $positiveImageName = $positiveImage->hashName();
+        $negativeImageName = $negativeImage->hashName();
+
+        $dirPositive = 'public/positives';
+        $dirNegative = 'public/negatives';
+
+        $request->file('positiveImage')->storeAs($dirPositive, $positiveImageName);
+        $request->file('negativeImage')->storeAs($dirNegative, $negativeImageName);
+
+        $donor = Donor::create([
             'fullName' => $request->fullName,
             'gender' => $request->gender,
             'placeBirth' => $request->placeBirth,
@@ -64,7 +78,9 @@ class DonorController extends Controller
             'weight' => $request->weight,
             'positiveDate' => $request->positiveDate,
             'negativeDate' => $request->negativeDate,
-            'agreement' => $request->agreement == 'on' ? true : false
+            'agreement' => $request->agreement == 'on' ? true : false,
+            'positiveImage' => $positiveImageName,
+            'negativeImage' => $negativeImageName
         ]);
 
         return redirect()->route('formulir.pendaftaran')->with('success', 'Terimakasih telah mendaftar :)');

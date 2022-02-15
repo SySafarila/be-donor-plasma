@@ -28,6 +28,8 @@ class CreateDonorsTable extends Migration
             $table->date('positiveDate');
             $table->date('negativeDate');
             $table->boolean('agreement');
+            $table->text('positiveImage');
+            $table->text('negativeImage');
             $table->timestamps();
         });
     }
