@@ -142,7 +142,7 @@
                         <div class="form-group col-lg-6 col-md-6 pr-lg-3">
                             <label for="inputPassword4">Upload File Positif</label>
                             <div class="custom-file">
-                                <img src="" alt="" class="covid-positive-file-preview">
+                                <img src="" alt="" class="covid-positive-file-preview" style="object-fit: contain">
                                 <input type="file" class="custom-file-input" id="covid-positive-file"
                                     onchange="covidPositiveFilePreview(this);" name="positiveImage" required>
                                 <label class="custom-file-label covid-positive-filename shadow-none"
@@ -155,7 +155,7 @@
                         <div class="form-group col-lg-6 col-md-6 pl-lg-3">
                             <label for="inputPassword4">Upload File Negatif</label>
                             <div class="custom-file">
-                                <img src="" alt="" class="covid-negative-file-preview">
+                                <img src="" alt="" class="covid-negative-file-preview" style="object-fit: contain">
                                 <input type="file" class="custom-file-input" id="covid-negative-file"
                                     onchange="covidNegativeFilePreview(this);" name="negativeImage" required>
                                 <label class="custom-file-label covid-negative-filename shadow-none"

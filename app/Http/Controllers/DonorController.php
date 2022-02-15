@@ -14,7 +14,11 @@ class DonorController extends Controller
      */
     public function index()
     {
-        //
+        $donors = Donor::latest()->get();
+
+        // return $donors[0];
+
+        return view('admin.donors.index', compact('donors'));
     }
 
     /**
@@ -128,6 +132,19 @@ class DonorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Donor::destroy($id);
+
+        return redirect()->route('admin.donors.index')->with('success', 'Data deleted !');
+    }
+
+    public function massDelete(Request $request)
+    {
+        $arr = explode(',', $request->ids);
+
+        foreach ($arr as $id) {
+            Donor::destroy($id);
+        }
+
+        return redirect()->route('admin.donors.index')->with('success', 'Bulk delete success');
     }
 }

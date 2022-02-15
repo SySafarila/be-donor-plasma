@@ -42,10 +42,14 @@ Route::middleware(['auth', 'verified', 'can:admin access'])->prefix('admin')->na
     // users
     Route::resource('/users', UserController::class);
 
+    // donors
+    Route::resource('donors', DonorController::class);
+
     // bulk delete
     Route::delete('/bulk-delete/permissions', [PermissionController::class, 'massDelete'])->name('permissions.bulkDelete');
     Route::delete('/bulk-delete/roles', [RoleController::class, 'massDelete'])->name('roles.bulkDelete');
     Route::delete('/bulk-delete/users', [UserController::class, 'massDelete'])->name('users.bulkDelete');
+    Route::delete('/bulk-delete/donors', [DonorController::class, 'massDelete'])->name('donors.bulkDelete');
 });
 
 // account manager

@@ -76,6 +76,18 @@
                         </a>
                     </li>
                 @endcan
+                @can('donors read')
+                    <li class="nav-item">
+                        <a href="{{ route('admin.donors.index') }}"
+                            class="nav-link {{ request()->routeIs('admin.donors.*') ? 'active' : '' }}">
+                            <i class="nav-icon fas fa-users-cog"></i>
+                            <p>
+                                Donors
+                                {{-- <span class="right badge badge-danger">New</span> --}}
+                            </p>
+                        </a>
+                    </li>
+                @endcan
                 <li class="nav-item">
                     <a href="{{ route('logout') }}" class="nav-link"
                         onclick="event.preventDefault();document.querySelector('#logoutForm').submit()">
