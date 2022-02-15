@@ -30,6 +30,7 @@ class CreateDonorsTable extends Migration
             $table->boolean('agreement');
             $table->text('positiveImage');
             $table->text('negativeImage');
+            $table->boolean('status');
             $table->timestamps();
         });
     }

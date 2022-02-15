@@ -43,7 +43,7 @@ Route::middleware(['auth', 'verified', 'can:admin access'])->prefix('admin')->na
     Route::resource('/users', UserController::class);
 
     // donors
-    Route::resource('donors', DonorController::class);
+    Route::resource('donors', DonorController::class)->except(['create', 'edit', 'update']);
 
     // bulk delete
     Route::delete('/bulk-delete/permissions', [PermissionController::class, 'massDelete'])->name('permissions.bulkDelete');

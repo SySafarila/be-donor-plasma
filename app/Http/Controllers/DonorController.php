@@ -96,9 +96,18 @@ class DonorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
-        //
+        $request->validate([
+            'status' => ['required', 'boolean']
+        ]);
+
+        $donor = Donor::where('id', $id)->first();
+        $donor->update([
+            'status' => $request->status
+        ]);
+
+        return redirect()->route('admin.donors.index')->with('success', 'Data updated !');
     }
 
     /**

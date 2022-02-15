@@ -29,7 +29,8 @@ class DonorSeeder extends Seeder
             'negativeDate' => now(),
             'agreement' => true,
             'positiveImage' => 'positive.jpg',
-            'negativeImage' => 'negative.jpg'
+            'negativeImage' => 'negative.jpg',
+            'status' => false
         ]);
         Donor::create([
             'fullName' => 'Syahrul',
@@ -46,7 +47,8 @@ class DonorSeeder extends Seeder
             'negativeDate' => now(),
             'agreement' => true,
             'positiveImage' => 'positive.jpg',
-            'negativeImage' => 'negative.jpg'
+            'negativeImage' => 'negative.jpg',
+            'status' => false
         ]);
         Donor::create([
             'fullName' => 'Syahrul',
@@ -63,7 +65,8 @@ class DonorSeeder extends Seeder
             'negativeDate' => now(),
             'agreement' => true,
             'positiveImage' => 'positive.jpg',
-            'negativeImage' => 'negative.jpg'
+            'negativeImage' => 'negative.jpg',
+            'status' => false
         ]);
         Donor::create([
             'fullName' => 'Syahrul',
@@ -80,7 +83,8 @@ class DonorSeeder extends Seeder
             'negativeDate' => now(),
             'agreement' => true,
             'positiveImage' => 'positive.jpg',
-            'negativeImage' => 'negative.jpg'
+            'negativeImage' => 'negative.jpg',
+            'status' => false
         ]);
     }
 }

@@ -56,10 +56,11 @@
                                 {{-- <th class="text-capitalize">Birth Place</th> --}}
                                 <th class="text-capitalize">Birth Date</th>
                                 {{-- <th class="text-capitalize">mobile</th> --}}
-                                <th class="text-capitalize">bloodType</th>
+                                <th class="text-capitalize">blood Type</th>
                                 <th class="text-capitalize">rhesus</th>
-                                <th class="text-capitalize">height</th>
-                                <th class="text-capitalize">weight</th>
+                                <th class="text-capitalize">status</th>
+                                {{-- <th class="text-capitalize">height</th> --}}
+                                {{-- <th class="text-capitalize">weight</th> --}}
                                 {{-- <th class="text-capitalize">Created At</th> --}}
                                 <th class="d-print-none">Options</th>
                             </tr>
@@ -75,18 +76,25 @@
                                     {{-- <td>{{ $donor->mobile }}</td> --}}
                                     <td class="text-capitalize">{{ explode('-', $donor->bloodType)[2] }}</td>
                                     <td>{{ $donor->rhesus == 'rhesus-plus' ? '+' : '-' }}</td>
-                                    <td>{{ $donor->height }}cm</td>
-                                    <td>{{ $donor->weight }}kg</td>
+                                    <td>{{ $donor->status ? 'Accepted' : 'Rejected' }}</td>
+                                    {{-- <td>{{ $donor->height }}cm</td> --}}
+                                    {{-- <td>{{ $donor->weight }}kg</td> --}}
                                     {{-- <td>{{ $donor->created_at->diffForHumans() }}</td> --}}
                                     <td>
                                         <div class="d-flex flex-column flex-md-row justify-content-center"
                                             style="gap: 0.5rem">
-                                            @can('donors accept')
-                                                <a href="#" class="btn btn-sm btn-secondary">Accept</a>
-                                            @endcan
-                                            @can('donors reject')
-                                                <a href="#" class="btn btn-sm btn-secondary">Reject</a>
-                                            @endcan
+                                            @if ($donor->status)
+                                                @can('donors reject')
+                                                    <a href="{{ route('admin.donors.show', ['donor' => $donor->id, 'status' => false]) }}"
+                                                        class="btn btn-sm btn-outline-danger">Reject</a>
+                                                @endcan
+
+                                            @else
+                                                @can('donors accept')
+                                                    <a href="{{ route('admin.donors.show', ['donor' => $donor->id, 'status' => true]) }}"
+                                                        class="btn btn-sm btn-outline-success">Accept</a>
+                                                @endcan
+                                            @endif
                                             @can('donors read')
                                                 <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal"
                                                     data-target="#donor-{{ $donor->id }}">
@@ -114,10 +122,11 @@
                                 {{-- <th class="text-capitalize">Birth Place</th> --}}
                                 <th class="text-capitalize">Birth Date</th>
                                 {{-- <th class="text-capitalize">mobile</th> --}}
-                                <th class="text-capitalize">bloodType</th>
+                                <th class="text-capitalize">blood Type</th>
                                 <th class="text-capitalize">rhesus</th>
-                                <th class="text-capitalize">height</th>
-                                <th class="text-capitalize">weight</th>
+                                <th class="text-capitalize">status</th>
+                                {{-- <th class="text-capitalize">height</th> --}}
+                                {{-- <th class="text-capitalize">weight</th> --}}
                                 {{-- <th class="text-capitalize">Created At</th> --}}
                                 <th class="d-print-none">Options</th>
                             </tr>
@@ -187,22 +196,30 @@
                             </tr>
                             <tr>
                                 <td>Positive Date</td>
-                                <td>{{ \Carbon\Carbon::parse( $donor->positiveDate)->format('d F Y') }}</td>
+                                <td>{{ \Carbon\Carbon::parse($donor->positiveDate)->format('d F Y') }}</td>
                             </tr>
                             <tr>
                                 <td>Negative Date</td>
-                                <td>{{ \Carbon\Carbon::parse( $donor->negativeDate)->format('d F Y') }}</td>
+                                <td>{{ \Carbon\Carbon::parse($donor->negativeDate)->format('d F Y') }}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{ $donor->status ? 'Accepted' : 'Rejected' }}</td>
                             </tr>
                             <tr>
                                 <td>Positive Image</td>
                                 <td>
-                                    <img src="{{ asset('storage/positives/' . $donor->positiveImage) }}" alt="{{ $donor->positiveImage }}" style="max-width: 10rem;max-height: 10rem;object-fit: contain;">
+                                    <img src="{{ asset('storage/positives/' . $donor->positiveImage) }}"
+                                        alt="{{ $donor->positiveImage }}"
+                                        style="max-width: 10rem;max-height: 10rem;object-fit: contain;">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Negative Image</td>
                                 <td>
-                                    <img src="{{ asset('storage/negatives/' . $donor->negativeImage) }}" alt="{{ $donor->negativeImage }}" style="max-width: 10rem;max-height: 10rem;object-fit: contain;">
+                                    <img src="{{ asset('storage/negatives/' . $donor->negativeImage) }}"
+                                        alt="{{ $donor->negativeImage }}"
+                                        style="max-width: 10rem;max-height: 10rem;object-fit: contain;">
                                 </td>
                             </tr>
                         </table>
@@ -294,7 +311,7 @@
                     targets: 0
                 }, {
                     orderable: false,
-                    targets: 3
+                    targets: 7
                 }],
                 order: [
                     [1, 'asc']
