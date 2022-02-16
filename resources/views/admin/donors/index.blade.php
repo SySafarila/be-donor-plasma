@@ -29,9 +29,9 @@
             <div class="row mb-2">
                 <div class="col-sm-6 d-flex align-items-center">
                     <h1 class="m-0">Donors</h1>
-                    @can('donors create')
+                    {{-- @can('donors create')
                         <a href="{{ route('admin.permissions.create') }}" class="material-icons-round">add</a>
-                    @endcan
+                    @endcan --}}
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
