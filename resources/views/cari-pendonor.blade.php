@@ -4,9 +4,10 @@
     <section class="container pt-5">
         <h5 class="fw-medium mb-0">Cari pendonor<br>dengan melengkapi data dibawah</h5>
         <form action="{{ route('cari.pendonor') }}" method="GET" class="row pt-3">
-
+            {{-- @csrf --}}
+            <input type="hidden" name="search" value="{{ true }}">
             <div class="col-lg-2 col-md-3">
-                <select id="select-blood-group" placeholder="Golongan Darah" name="bloodType">
+                <select id="select-blood-group" placeholder="Golongan Darah" name="bloodType" required>
                     <option value="">Pilih Golongan Darah</option>
                     <option value="blood-group-a">A</option>
                     <option value="blood-group-b">B</option>
@@ -16,7 +17,7 @@
             </div>
 
             <div class="col-lg-2 col-md-3 pt-2 pt-lg-0 pt-md-0">
-                <select id="select-blood-rhesus" placeholder="Rhesus" name="rhesus">
+                <select id="select-blood-rhesus" placeholder="Rhesus" name="rhesus" required>
                     <option value="">Pilih Rhesus Darah</option>
                     <option value="rhesus-plus">+</option>
                     <option value="rhesus-minus">-</option>
@@ -24,11 +25,13 @@
             </div>
 
             <div class="col-lg-2 col-md-3 pt-2 pt-lg-0 pt-md-0">
-                <select id="select-city" placeholder="Kota" name="city">
+                <select id="select-city" placeholder="Kota" name="city" required>
                     <option value="">Pilih Kota</option>
-                    <option value="JKT">Jakarta</option>
-                    <option value="BDG">Bandung</option>
-                    <option value="MDC">Manado</option>
+                    <option value="jakarta pusat">Jakarta Pusat</option>
+                    <option value="jakarta utara">Jakarta Utara</option>
+                    <option value="jakarta barat">Jakarta Barat</option>
+                    <option value="jakarta selatan">Jakarta Selatan</option>
+                    <option value="jakarta timur">Jakarta Timur</option>
                 </select>
             </div>
 

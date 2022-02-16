@@ -31,7 +31,7 @@ class DonorSeeder extends Seeder
             'positiveImage' => 'positive.jpg',
             'negativeImage' => 'negative.jpg',
             'status' => false,
-            'city' => 'Jakarta'
+            'city' => 'Jakarta utara'
         ]);
         Donor::create([
             'fullName' => 'Syahrul',
@@ -50,7 +50,7 @@ class DonorSeeder extends Seeder
             'positiveImage' => 'positive.jpg',
             'negativeImage' => 'negative.jpg',
             'status' => false,
-            'city' => 'Jakarta'
+            'city' => 'Jakarta barat'
         ]);
         Donor::create([
             'fullName' => 'Syahrul',
@@ -69,7 +69,7 @@ class DonorSeeder extends Seeder
             'positiveImage' => 'positive.jpg',
             'negativeImage' => 'negative.jpg',
             'status' => false,
-            'city' => 'Jakarta'
+            'city' => 'Jakarta selatan'
         ]);
         Donor::create([
             'fullName' => 'Syahrul',
@@ -88,7 +88,7 @@ class DonorSeeder extends Seeder
             'positiveImage' => 'positive.jpg',
             'negativeImage' => 'negative.jpg',
             'status' => false,
-            'city' => 'Jakarta'
+            'city' => 'Jakarta timur'
         ]);
         Donor::create([
             'fullName' => 'Syahrul',
@@ -107,7 +107,7 @@ class DonorSeeder extends Seeder
             'positiveImage' => 'positive.jpg',
             'negativeImage' => 'negative.jpg',
             'status' => false,
-            'city' => 'Jakarta'
+            'city' => 'Jakarta pusat'
         ]);
         Donor::create([
             'fullName' => 'Syahrul',
@@ -126,7 +126,7 @@ class DonorSeeder extends Seeder
             'positiveImage' => 'positive.jpg',
             'negativeImage' => 'negative.jpg',
             'status' => false,
-            'city' => 'Jakarta'
+            'city' => 'Jakarta barat'
         ]);
         Donor::create([
             'fullName' => 'Syahrul',
@@ -145,7 +145,7 @@ class DonorSeeder extends Seeder
             'positiveImage' => 'positive.jpg',
             'negativeImage' => 'negative.jpg',
             'status' => false,
-            'city' => 'Jakarta'
+            'city' => 'Jakarta pusat'
         ]);
     }
 }

@@ -179,7 +179,19 @@ class DonorController extends Controller
 
     public function search(Request $request)
     {
-        $donors = Donor::latest()->get();
+        $request->validate([
+            'bloodType' => ['in:blood-group-a,blood-group-b,blood-group-o,blood-group-ab'],
+            'rhesus' => ['in:rhesus-plus,rhesus-minus'],
+            'city' => ['in:jakarta pusat,jakarta utara,jakarta barat,jakarta selatan,jakarta timur'],
+            'search' => ['boolean']
+        ]);
+
+        if ($request->search == true) {
+            $donors = Donor::where(['bloodType' => $request->bloodType, 'rhesus' => $request->rhesus, 'city' => $request->city])->latest()->get();
+        } else {
+            $donors = Donor::latest()->get();
+        }
+
 
         $aArr = [];
         $abArr = [];
