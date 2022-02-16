@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'landingpage')->name('landingpage');
 Route::view('/formulir-pendaftaran', 'formulir-pendaftaran')->name('formulir.pendaftaran');
-Route::view('/cari-pendonor', 'cari-pendonor')->name('cari.pendonor');
+Route::get('/cari-pendonor', [DonorController::class, 'search'])->name('cari.pendonor');
 
 Route::get('/dashboard', function () {
     return redirect()->route('admin.index');

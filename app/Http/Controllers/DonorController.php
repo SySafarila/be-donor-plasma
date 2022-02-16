@@ -176,4 +176,42 @@ class DonorController extends Controller
 
         return redirect()->route('admin.donors.index')->with('success', 'Bulk delete success');
     }
+
+    public function search(Request $request)
+    {
+        $donors = Donor::latest()->get();
+
+        $aArr = [];
+        $abArr = [];
+        $bArr = [];
+        $oArr = [];
+
+        // return explode(0, $donors[0]->mobile)[1];
+
+        foreach ($donors as $donor) {
+            switch ($donor->bloodType) {
+                case 'blood-group-a':
+                    array_push($aArr, $donor);
+                    break;
+
+                case 'blood-group-b':
+                    array_push($bArr, $donor);
+                    break;
+
+                case 'blood-group-o':
+                    array_push($oArr, $donor);
+                    break;
+
+                case 'blood-group-ab':
+                    array_push($abArr, $donor);
+                    break;
+
+                default:
+                    //
+                    break;
+            }
+        }
+
+        return view('cari-pendonor', compact('donors', 'aArr', 'abArr', 'bArr', 'oArr'));
+    }
 }

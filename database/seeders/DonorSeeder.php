@@ -90,5 +90,62 @@ class DonorSeeder extends Seeder
             'status' => false,
             'city' => 'Jakarta'
         ]);
+        Donor::create([
+            'fullName' => 'Syahrul',
+            'gender' => 'rhesus-plus',
+            'placeBirth' => 'Sukabumi',
+            'dateBirth' => now(),
+            'mobile' => '0821123123',
+            'email' => 'mail@mail.com',
+            'bloodType' => 'blood-group-b',
+            'rhesus' => 'rhesus-plus',
+            'height' => '160',
+            'weight' => '60',
+            'positiveDate' => now(),
+            'negativeDate' => now(),
+            'agreement' => true,
+            'positiveImage' => 'positive.jpg',
+            'negativeImage' => 'negative.jpg',
+            'status' => false,
+            'city' => 'Jakarta'
+        ]);
+        Donor::create([
+            'fullName' => 'Syahrul',
+            'gender' => 'rhesus-plus',
+            'placeBirth' => 'Sukabumi',
+            'dateBirth' => now(),
+            'mobile' => '0821123123',
+            'email' => 'mail@mail.com',
+            'bloodType' => 'blood-group-ab',
+            'rhesus' => 'rhesus-plus',
+            'height' => '160',
+            'weight' => '60',
+            'positiveDate' => now(),
+            'negativeDate' => now(),
+            'agreement' => true,
+            'positiveImage' => 'positive.jpg',
+            'negativeImage' => 'negative.jpg',
+            'status' => false,
+            'city' => 'Jakarta'
+        ]);
+        Donor::create([
+            'fullName' => 'Syahrul',
+            'gender' => 'rhesus-plus',
+            'placeBirth' => 'Sukabumi',
+            'dateBirth' => now(),
+            'mobile' => '0821123123',
+            'email' => 'mail@mail.com',
+            'bloodType' => 'blood-group-o',
+            'rhesus' => 'rhesus-plus',
+            'height' => '160',
+            'weight' => '60',
+            'positiveDate' => now(),
+            'negativeDate' => now(),
+            'agreement' => true,
+            'positiveImage' => 'positive.jpg',
+            'negativeImage' => 'negative.jpg',
+            'status' => false,
+            'city' => 'Jakarta'
+        ]);
     }
 }
