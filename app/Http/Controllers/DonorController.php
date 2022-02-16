@@ -179,18 +179,18 @@ class DonorController extends Controller
 
     public function search(Request $request)
     {
-        $request->validate([
-            'bloodType' => ['in:blood-group-a,blood-group-b,blood-group-o,blood-group-ab'],
-            'rhesus' => ['in:rhesus-plus,rhesus-minus'],
-            'city' => ['in:jakarta pusat,jakarta utara,jakarta barat,jakarta selatan,jakarta timur'],
-            'search' => ['boolean']
-        ]);
+        // $request->validate([
+        //     'bloodType' => ['in:blood-group-a,blood-group-b,blood-group-o,blood-group-ab'],
+        //     'rhesus' => ['in:rhesus-plus,rhesus-minus'],
+        //     'city' => ['in:jakarta pusat,jakarta utara,jakarta barat,jakarta selatan,jakarta timur'],
+        //     'search' => ['boolean']
+        // ]);
 
-        if ($request->search == true) {
-            $donors = Donor::where(['bloodType' => $request->bloodType, 'rhesus' => $request->rhesus, 'city' => $request->city])->latest()->get();
-        } else {
-            $donors = Donor::latest()->get();
-        }
+        // if ($request->search == true) {
+        //     $donors = Donor::where(['bloodType' => $request->bloodType, 'rhesus' => $request->rhesus, 'city' => $request->city])->latest()->get();
+        // } else {
+        $donors = Donor::where('status', true)->latest()->get();
+        // }
 
 
         $aArr = [];
@@ -225,5 +225,13 @@ class DonorController extends Controller
         }
 
         return view('cari-pendonor', compact('donors', 'aArr', 'abArr', 'bArr', 'oArr'));
+    }
+    public function search2(Request $request)
+    {
+        $donors = Donor::where(['status' => true, 'bloodType' => $request->bloodType, 'rhesus' => $request->rhesus, 'city' => $request->city])->latest()->get();
+
+        // return $donors;
+
+        return view('cari-pendonor2', compact('donors'));
     }
 }

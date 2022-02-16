@@ -3,7 +3,7 @@
 @section('content')
     <section class="container pt-5">
         <h5 class="fw-medium mb-0">Cari pendonor<br>dengan melengkapi data dibawah</h5>
-        <form action="{{ route('cari.pendonor') }}" method="GET" class="row pt-3">
+        <form action="{{ route('cari.pendonor2') }}" method="GET" class="row pt-3">
             {{-- @csrf --}}
             <input type="hidden" name="search" value="{{ true }}">
             <div class="col-lg-2 col-md-3">
