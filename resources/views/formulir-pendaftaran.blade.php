@@ -61,6 +61,22 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-lg-6 col-md-6 pr-lg-3">
+                            <label for="select-city">Kota</label>
+                            <select id="select-city" placeholder="Pilih" name="city" required>
+                                <option value="">Pilih Kota</option>
+                                <option value="jakarta pusat">Jakarta Pusat</option>
+                                <option value="jakarta utara">Jakarta Utara</option>
+                                <option value="jakarta barat">Jakarta Barat</option>
+                                <option value="jakarta selatan">Jakarta Selatan</option>
+                                <option value="jakarta timur">Jakarta Timur</option>
+                            </select>
+                            @error('city')
+                                <small class="text-danger">{{ $message ?? 'xxx' }}</small>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-lg-6 col-md-6 pr-lg-3">
                             <label for="input-mobile-phone-number">Nomor Hp</label>
                             <input type="number" class="form-control" id="input-mobile-phone-number" name="mobile"
                                 required>

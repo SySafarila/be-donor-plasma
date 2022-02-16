@@ -71,7 +71,8 @@ class DonorController extends Controller
             'negativeDate' => ['required'],
             'agreement' => ['required'],
             'positiveImage' => ['required', 'image'],
-            'negativeImage' => ['required', 'image']
+            'negativeImage' => ['required', 'image'],
+            'city' => ['required', 'max:255', 'in:jakarta pusat,jakarta utara,jakarta barat,jakarta selatan,jakarta timur']
         ]);
 
         $positiveImage = $request->file('positiveImage');
@@ -102,7 +103,8 @@ class DonorController extends Controller
             'agreement' => $request->agreement == 'on' ? true : false,
             'positiveImage' => $positiveImageName,
             'negativeImage' => $negativeImageName,
-            'status' => false
+            'status' => false,
+            'city' => $request->city
         ]);
 
         return redirect()->route('formulir.pendaftaran')->with('success', 'Terimakasih telah mendaftar :)');

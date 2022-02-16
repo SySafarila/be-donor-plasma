@@ -47,10 +47,10 @@
         <div class="container-fluid">
             <div class="card m-0">
                 <div class="card-body table-responsive">
-                    <div class="mb-3">
-                        <a href="{{ route('admin.donors.index') }}" class="btn btn-sm btn-primary">All</a>
-                        <a href="{{ route('admin.donors.index', ['status' => 'accepted']) }}" class="btn btn-sm btn-success">Accepted</a>
-                        <a href="{{ route('admin.donors.index', ['status' => 'rejected']) }}" class="btn btn-sm btn-danger">Rejected</a>
+                    <div class="mb-3 d-flex" style="gap: 10px;">
+                        <a href="{{ route('admin.donors.index') }}" class="btn btn-sm btn-outline-primary">All</a>
+                        <a href="{{ route('admin.donors.index', ['status' => 'accepted']) }}" class="btn btn-sm btn-outline-success">Accepted</a>
+                        <a href="{{ route('admin.donors.index', ['status' => 'rejected']) }}" class="btn btn-sm btn-outline-danger">Rejected</a>
                     </div>
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                         <thead>
@@ -176,6 +176,10 @@
                                 <td>{{ \Carbon\Carbon::parse($donor->dateBirth)->format('d F Y') }}</td>
                             </tr>
                             <tr>
+                                <td>City</td>
+                                <td class="text-capitalize">{{ $donor->city }}</td>
+                            </tr>
+                            <tr>
                                 <td>Mobile</td>
                                 <td>{{ $donor->mobile }}</td>
                             </tr>
@@ -216,7 +220,7 @@
                                 <td>
                                     <img src="{{ asset('storage/positives/' . $donor->positiveImage) }}"
                                         alt="{{ $donor->positiveImage }}"
-                                        style="max-width: 10rem;max-height: 10rem;object-fit: contain;">
+                                        style="max-width: 10rem;max-height: 10rem;object-fit: contain;width: 10rem;height: 10rem;">
                                 </td>
                             </tr>
                             <tr>
@@ -224,7 +228,7 @@
                                 <td>
                                     <img src="{{ asset('storage/negatives/' . $donor->negativeImage) }}"
                                         alt="{{ $donor->negativeImage }}"
-                                        style="max-width: 10rem;max-height: 10rem;object-fit: contain;">
+                                        style="max-width: 10rem;max-height: 10rem;object-fit: contain;width: 10rem;height: 10rem;">
                                 </td>
                             </tr>
                         </table>

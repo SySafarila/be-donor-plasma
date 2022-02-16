@@ -31,6 +31,7 @@ class CreateDonorsTable extends Migration
             $table->text('positiveImage');
             $table->text('negativeImage');
             $table->boolean('status');
+            $table->string('city');
             $table->timestamps();
         });
     }
