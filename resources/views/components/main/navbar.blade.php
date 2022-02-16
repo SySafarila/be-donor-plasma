@@ -13,14 +13,17 @@
                     <a class="nav-link active nav-menu" href="{{ route('landingpage') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link nav-menu">Tentang</a>
+                    <a href="{{ request()->routeIs('landingpage') ? '#about' : route('landingpage') . '#about' }}"
+                        class="nav-link nav-menu">Tentang</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn primary-btn btn-donate-now text-white nav-link" href="{{ route('formulir.pendaftaran') }}">Donor
+                    <a class="btn primary-btn btn-donate-now text-white nav-link"
+                        href="{{ route('formulir.pendaftaran') }}">Donor
                         Sekarang</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn primary-btn-outline btn-looking-for-donors nav-link" href="{{ route('cari.pendonor') }}">Cari
+                    <a class="btn primary-btn-outline btn-looking-for-donors nav-link"
+                        href="{{ route('cari.pendonor') }}">Cari
                         Pendonor</a>
                 </li>
             </ul>
