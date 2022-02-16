@@ -49,8 +49,10 @@
                 <div class="card-body table-responsive">
                     <div class="mb-3 d-flex" style="gap: 10px;">
                         <a href="{{ route('admin.donors.index') }}" class="btn btn-sm btn-outline-primary">All</a>
-                        <a href="{{ route('admin.donors.index', ['status' => 'accepted']) }}" class="btn btn-sm btn-outline-success">Accepted</a>
-                        <a href="{{ route('admin.donors.index', ['status' => 'rejected']) }}" class="btn btn-sm btn-outline-danger">Rejected</a>
+                        <a href="{{ route('admin.donors.index', ['status' => 'accepted']) }}"
+                            class="btn btn-sm btn-outline-success">Accepted</a>
+                        <a href="{{ route('admin.donors.index', ['status' => 'rejected']) }}"
+                            class="btn btn-sm btn-outline-danger">Rejected</a>
                     </div>
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                         <thead>
@@ -264,7 +266,7 @@
     <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
     <script>
         $(document).ready(function() {
-            const exportOption = [1, 2]
+            const exportOption = [1, 2, 3, 4, 5, 6]
             $('#datatable').DataTable({
                 dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
                     "<'row'<'col-sm-12'B>>" +
